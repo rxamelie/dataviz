@@ -1,0 +1,3 @@
+http://archive.ics.uci.edu/dataset/320/student+performance
+
+http://uu.diva-portal.org/smash/get/diva2:1464106/FULLTEXT01.pdf
