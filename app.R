@@ -1,8 +1,10 @@
-#setwd("~/perso/cours/DATAVIZ")
-setwd("C:/Users/rouxa/OneDrive/Documents/dataviz/dataviz_20231212")
+### put here your directory 
+
+setwd("C:/Users/rouxa/Documents/GitHub/dataviz")
 
 
-# Lire les données depuis un fichier Excel
+
+### packages needed
 library(shiny)
 library(shinydashboard)
 library(readxl)
@@ -21,11 +23,14 @@ library(Metrics)
 library(gridExtra)
 library(heatmaply)
 
+
+### importation of data
+
 data <- read_xlsx("student-mat.xlsx")
 data2 <- predict(dummyVars(~ ., data = data), newdata = data)
 
 
-# Charger les données depuis un fichier Excel data <- read_excel("student-mat.xlsx")
+### explanations of the data
 
 
 explanations <- list(
@@ -63,6 +68,9 @@ explanations <- list(
   G2 = "second period grade (numeric: from 0 to 20)",
   G3 = "third period grade (numeric: from 0 to 20, output target)"
 )
+
+
+### ui's code
 
 
 ui <- dashboardPage(
@@ -442,6 +450,9 @@ ui <- dashboardPage(
     )
   )
 )
+
+
+### server's code
 
 
 server <- function(input, output, session) {
