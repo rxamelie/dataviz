@@ -1,5 +1,5 @@
 ### put here your directory 
-setwd("C:/Users/Yassmine/Documents/isup/CS3") 
+setwd("C:/Users/rouxa/Documents/GitHub/dataviz")
 
 ### packages needed
 library(shiny)
