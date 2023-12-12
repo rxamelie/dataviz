@@ -2,8 +2,6 @@
 
 setwd("C:/Users/rouxa/Documents/GitHub/dataviz")
 
-
-
 ### packages needed
 library(shiny)
 library(shinydashboard)
