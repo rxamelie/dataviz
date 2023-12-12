@@ -1,5 +1,4 @@
 ### put here your directory 
-
 setwd("C:/Users/rouxa/Documents/GitHub/dataviz")
 
 ### packages needed
@@ -77,13 +76,13 @@ ui <- dashboardPage(
   dashboardSidebar(
     sidebarMenu(
       id="tabs",
-      menuItem("PrÃ©sentation", tabName = "presentation", icon = icon("info-circle")),
       menuItem("Sommaire", tabName = "sommaire", icon = icon("list")),
+      menuItem("Présentation", tabName = "presentation", icon = icon("info-circle")),
       menuItem("Analyse des variables", tabName = "new_graph", icon = icon("chart-line"),
-               menuSubItem("Comparaison des 2 lycÃ©es", tabName = "comparaison", icon = icon("angle-right")),
+               menuSubItem("Comparaison des 2 lycées", tabName = "comparaison", icon = icon("angle-right")),
                menuSubItem("Machine Learning", tabName = "ml", icon = icon("angle-right")),
-               menuSubItem("Visualisation des rÃ©sultats", tabName = "comparaison_ensemble", icon = icon("angle-right"))),
-      menuItem("PrÃ©diction", tabName = "prediction", icon=icon("star")),
+               menuSubItem("Visualisation des résultats", tabName = "comparaison_ensemble", icon = icon("angle-right"))),
+      menuItem("Prédiction", tabName = "prediction", icon=icon("star")),
       menuItem("Conclusion", tabName = "conclusion", icon = icon("thumbs-up"))
     )
   ),
@@ -92,14 +91,14 @@ ui <- dashboardPage(
       tabItem(tabName = "sommaire",
               HTML("<h1 style='color: #003f5c; text-align: center;'><strong> Sommaire </strong></h1>"),
               div(
-                HTML('<p> Vous trouverez ci-dessous le sommaire de notre projet. Ainsi, vous pouvez dÃ©couvrir les diffÃ©rentes parties qui constituent notre prÃ©sentation, en un simple clic sur la partie qui vous intÃ©resse !</p>')
+                HTML('<p> Vous trouverez ci-dessous le sommaire de notre projet. Ainsi, vous pouvez découvrir les différentes parties qui constituent notre présentation, en un simple clic sur la partie qui vous intéresse !</p>')
               ),
-              div(actionButton("go_to_presentation", "PrÃ©sentation du sujet et de la base de donnÃ©es", style = "border:none; background-color: transparent; color:#665191; font-size:20px; text-align: left; width:100%;")),
+              div(actionButton("go_to_presentation", "Présentation du sujet et de la base de données", style = "border:none; background-color: transparent; color:#665191; font-size:20px; text-align: left; width:100%;")),
               div(actionButton("go_to_new_graph", "I. Analyse des variables", style = "border:none; background-color: transparent; color:#665191; font-size:20px; text-align: left; width:100%;")),
-              div(actionButton("go_to_comparaison", "I.1 Comparaison des deux lycÃ©es ", style = "border:none; background-color: transparent; color:#a05195; font-size:18px; text-align: left; width:100%;")),
+              div(actionButton("go_to_comparaison", "I.1 Comparaison des deux lycées ", style = "border:none; background-color: transparent; color:#a05195; font-size:18px; text-align: left; width:100%;")),
               div(actionButton("go_to_machine", "I.2 Machine Learning", style = "border:none; background-color: transparent; color:#a05195; font-size:18px; text-align: left; width:100%;")),
-              div(actionButton("go_to_ensemble", "I.3 Visualisation des variables du modÃ¨le", style = "border:none; background-color: transparent; color:#a05195; font-size:18px; text-align: left; width:100%;")),
-              div(actionButton("go_to_prediction_final", "II. PrÃ©diction", style = "border:none; background-color: transparent; color:#665191; font-size:20px; text-align: left; width:100%;")),
+              div(actionButton("go_to_ensemble", "I.3 Visualisation des variables du modèle", style = "border:none; background-color: transparent; color:#a05195; font-size:18px; text-align: left; width:100%;")),
+              div(actionButton("go_to_prediction_final", "II. Prédiction", style = "border:none; background-color: transparent; color:#665191; font-size:20px; text-align: left; width:100%;")),
               div(actionButton("go_to_conclusion", "Conclusion", style = "border:none; background-color: transparent; color:#665191; font-size:20px; text-align: left; width:100%;"))
               
       ),
@@ -111,14 +110,14 @@ ui <- dashboardPage(
             HTML("<h1 style='color: #003f5c; text-align: center;'><strong>Qui veut peut ?</strong></h1>"),
             HTML("<h2><strong><span style='color: #665191;'>Introduction</span></strong></h2>"),
             HTML("<div class='justify-text'>
-<p style='font-size: 18px; text-align: justify;'>Peut-on rÃ©ellement accomplir ce que l'on souhaite ?</p>
-<p style='text-align: justify;'> La question de 'qui veut peut' nous amÃ¨ne Ã  rÃ©flÃ©chir sur les ingrÃ©dients de la rÃ©ussite individuelle. Cet adage suggÃ¨re que la volontÃ© et l'effort personnel sont les moteurs clÃ©s de l'Ã©panouissement, mettant en avant l'importance de l'autodÃ©termination. Cependant, une analyse critique nous pousse Ã  considÃ©rer l'impact des variables socio-dÃ©mographiques et environnementales. Est-ce que la rÃ©ussite dÃ©pend uniquement de l'effort individuel, ou est-elle Ã©galement influencÃ©e par le contexte socio-Ã©conomique et culturel ? Explorer ce sujet de maniÃ¨re approfondie pourrait nous donner une vision plus Ã©quilibrÃ©e des parcours d'accomplissement individuel.</p>
-<p style='text-align: justify;'> Pour examiner cette question, nous ferons une Ã©tude des notes de mathÃ©matiques de 395 lycÃ©ens issus de deux lycÃ©es portugais, Ã  savoir Gabriel Pereira et Mousinho da Silveira, basÃ© sur 33 variables scolaire mais aussi socio-dÃ©mographiques que nous vous invitons Ã  dÃ©couvrir dans les items suivants :</p>
+<p style='font-size: 18px; text-align: justify;'>Peut-on réellement accomplir ce que l'on souhaite ?</p>
+<p style='text-align: justify;'> La question de 'qui veut peut' nous amène à réfléchir sur les ingrédients de la réussite individuelle. Cet adage suggère que la volonté et l'effort personnel sont les moteurs clés de l'épanouissement, mettant en avant l'importance de l'autodétermination. Cependant, une analyse critique nous pousse à considérer l'impact des variables socio-démographiques et environnementales. Est-ce que la réussite dépend uniquement de l'effort individuel, ou est-elle également influencée par le contexte socio-économique et culturel ? Explorer ce sujet de manière approfondie pourrait nous donner une vision plus équilibrée des parcours d'accomplissement individuel.</p>
+<p style='text-align: justify;'> Pour examiner cette question, nous ferons une étude des notes de mathématiques de 395 lycéens issus de deux lycées portugais, à savoir Gabriel Pereira et Mousinho da Silveira, basé sur 33 variables scolaire mais aussi socio-démographiques que nous vous invitons à découvrir dans les items suivants :</p>
 <p style='text-align: justify;'>
  <ol>
- <li> Le premier vous permettra de dÃ©couvrir la base de donnÃ©es. Vous pourrez, en fonction de vos prÃ©fÃ©rences, choisir le nombre de lignes affichÃ©es (max les 100 premiÃ¨res).</li>
- <li> Le second item vous permettra de mieux connaÃ®tre les variables. En effet, vous pourrez sÃ©lectionner les variables que vous souhaitez et une description de celle(s)-ci apparaÃ®tra.</li>
- <li> Enfin, le dernier item vous permettra d'avoir une premiÃ¨re introduction visuelle des variables. De plus, vous pourrez sÃ©lectionner les variables en choisissant l'Ã©chantillon de note G3 Ã©tudiÃ© et observer leur distribution.</li>
+ <li> Le premier vous permettra de découvrir la base de données. Vous pourrez, en fonction de vos préférences, choisir le nombre de lignes affichées (max les 100 premières).</li>
+ <li> Le second item vous permettra de mieux connaître les variables. En effet, vous pourrez sélectionner les variables que vous souhaitez et une description de celle(s)-ci apparaîtra.</li>
+ <li> Enfin, le dernier item vous permettra d'avoir une première introduction visuelle des variables. De plus, vous pourrez sélectionner les variables en choisissant l'échantillon de note G3 étudié et observer leur distribution.</li>
  </ol>
 </p>
 
@@ -128,7 +127,7 @@ ui <- dashboardPage(
         ),
         hr(),
         tabsetPanel(
-          tabPanel("Base de donnÃ©es",
+          tabPanel("Base de données",
                    DTOutput("table")
           ),
           tabPanel("Explication des variables",
@@ -136,14 +135,14 @@ ui <- dashboardPage(
                                choices = colnames(data), multiple = TRUE),
                    verbatimTextOutput("var_explanations")
           ),
-          tabPanel("PrÃ©sentation graphique des variables",
+          tabPanel("Présentation graphique des variables",
                    HTML('<ul>
-<li>SÃ©lectionnez une ou plusieurs variables...</li>
-<li>SÃ©lectionnez la plage pour la note G3...</li>
+<li>Sélectionnez une ou plusieurs variables...</li>
+<li>Sélectionnez la plage pour la note G3...</li>
 <li>Cliquez sur le bouton "Afficher les graphiques"...</li>
 </ul>'),
                    selectInput("variables", "Choisir une ou plusieurs variable(s)", multiple = TRUE, choices = colnames(data)),
-                   sliderInput("g3_range", "SÃ©lectionnez la plage pour la note G3", min = 0, max = 20, value = c(0, 20)),
+                   sliderInput("g3_range", "Sélectionnez la plage pour la note G3", min = 0, max = 20, value = c(0, 20)),
                    actionButton("plot_button", "Afficher les graphiques"),
                    uiOutput("plots_ui")
           )
@@ -154,15 +153,15 @@ ui <- dashboardPage(
         fluidRow(
           column(
             width = 12,
-            HTML("<h1 style='color: #003f5c; text-align: center;'><strong>Comparaison des deux lycÃ©es</strong></h1>"),
+            HTML("<h1 style='color: #003f5c; text-align: center;'><strong>Comparaison des deux lycées</strong></h1>"),
             HTML("<h2><strong><span style='color: #665191;'>Contexte</span></strong></h2>"),
             HTML("<div class='justify-text'>
- <p style='text-align: justify;'>Dans cette Ã©tude, les donnÃ©es ont Ã©tÃ© collectÃ©es auprÃ¨s de deux Ã©coles, Gabriel Pereira (GP) et Mousinho da Silveira (MS). Il faut garder Ã  l'esprit lors de la comparaison que seuls 46 Ã©tudiants sur 395 sont allÃ©s Ã  Mousinho da Silveira. Il faut donc Ãªtre trÃ¨s vigileant Ã  l'interprÃ©tation et aux conclusions qu'on pourrait en tirer, pour cela nous ferons les comparaisons uniquement en proportion.</p>
+ <p style='text-align: justify;'>Dans cette étude, les données ont été collectées auprès de deux écoles, Gabriel Pereira (GP) et Mousinho da Silveira (MS). Il faut garder à l'esprit lors de la comparaison que seuls 46 étudiants sur 395 sont allés à Mousinho da Silveira. Il faut donc être très vigileant à l'interprétation et aux conclusions qu'on pourrait en tirer, pour cela nous ferons les comparaisons uniquement en proportion.</p>
  </div>"),
             HTML("<h3><strong><span style='color: #a05195;'>Distribution des notes</span></strong></h3>"),
             HTML("<div class='justify-text'>
- <p style='text-align: justify;'>Pour comparer les notes dans les deux Ã©tablissements, nous vous proposons de regarder le barplot et le boxplot ci-dessous. Pour rappel, G1 correspond Ã  la note du T1, G2 du T2, et G3 la note T3. </p>
- <p style='text-align: justify;'>Le boxplot vous permettra de comparer diffÃ©rentes informations statistiques telles que la mÃ©diane, les quartiles, l'Ã©tendue des notes, tandis que le barplot vous permettra de regarder la proportion d'Ã©tudiants dans chaque intervalle de notes.</p>
+ <p style='text-align: justify;'>Pour comparer les notes dans les deux établissements, nous vous proposons de regarder le barplot et le boxplot ci-dessous. Pour rappel, G1 correspond à la note du T1, G2 du T2, et G3 la note T3. </p>
+ <p style='text-align: justify;'>Le boxplot vous permettra de comparer différentes informations statistiques telles que la médiane, les quartiles, l'étendue des notes, tandis que le barplot vous permettra de regarder la proportion d'étudiants dans chaque intervalle de notes.</p>
  </div>"),
             tabsetPanel(
               tabPanel("Barplot",
@@ -177,13 +176,13 @@ ui <- dashboardPage(
               )
             ),
             hr(), 
-            p("Comme vous avez pu le constater avec l'analyse du barplot et du boxplot, le lycÃ©e GP semble Ãªtre plus acadÃ©mique que le lycÃ©e MS."),
-            p("En outre, si on se focalise sur G3 ( ou bien mÃªme G1 et G2 mais cela est moins visible), on remarque que beaucoup plus d'Ã©lÃ¨ves (en proportion) ont des notes supÃ©rieures Ã  10. En effet, le nombre d'Ã©lÃ¨ves avec des faibles notes est plus important Ã  MS qu'Ã  GP, tandis que le nombre d'Ã©lÃ¨ves avec des notes Ã©levÃ©es est plus important Ã  GP. Enfin, la mÃ©diane et la note maximale sont meilleures Ã  GP."),
-            p("Attention, il est vrai qu'on remarque que MS a des profils d'Ã©lÃ¨ves en mathÃ©matiques plus homogÃ¨nes, mais ce constat ne doit pas Ãªtre pris en compte car cela relÃ¨ve surtout du faible effectif de notes de MS dont on dispose."),
-            p(HTML("Pour confirmer notre hypothÃ¨se, nous avons donc voulu analyser les variables:
+            p("Comme vous avez pu le constater avec l'analyse du barplot et du boxplot, le lycée GP semble être plus académique que le lycée MS."),
+            p("En outre, si on se focalise sur G3 ( ou bien même G1 et G2 mais cela est moins visible), on remarque que beaucoup plus d'élèves (en proportion) ont des notes supérieures à 10. En effet, le nombre d'élèves avec des faibles notes est plus important à MS qu'à GP, tandis que le nombre d'élèves avec des notes élevées est plus important à GP. Enfin, la médiane et la note maximale sont meilleures à GP."),
+            p("Attention, il est vrai qu'on remarque que MS a des profils d'élèves en mathématiques plus homogènes, mais ce constat ne doit pas être pris en compte car cela relève surtout du faible effectif de notes de MS dont on dispose."),
+            p(HTML("Pour confirmer notre hypothèse, nous avons donc voulu analyser les variables:
  <ul>
- <li>Ã©chec</li>
- <li>durÃ©e d'Ã©tude par jour</li>
+ <li>échec</li>
+ <li>durée d'étude par jour</li>
  <li>soutien scolaire</li>
  </ul>")),
             hr(),
@@ -196,12 +195,12 @@ ui <- dashboardPage(
                 plotOutput("hist_plot")
               )
             ),
-            p("L'analyse des ces variables permet de confirmer notre hypothÃ¨se car les Ã©lÃ¨ves Ã©tudient plus et ont moins d'Ã©checs dans cette Ã©cole. "),
-            p("Mais qu'est ce qui pourrait faire que ce lycÃ©e GP ai des Ã©lÃ©ves qui ont des meilleures profils en mathÃ©matiques?"),
+            p("L'analyse des ces variables permet de confirmer notre hypothèse car les élèves étudient plus et ont moins d'échecs dans cette école. "),
+            p("Mais qu'est ce qui pourrait faire que ce lycée GP ai des éléves qui ont des meilleures profils en mathématiques?"),
             HTML("<h3><strong><span style='color: #a05195;'>Influence des parents ?</span></strong></h2>"),
-            p("La premiÃ¨re idÃ©e qui pourrait nous venir Ã  l'esprit, est probablement l'influence de la famille ie des parents. En outre, il est vrai que si les parents de GP ont plus fait d'Ã©tude que MS, alors potentiellement ils pourraient d'avantage les aider ou auraient pu davantager les aider durant leur scolaritÃ©, ce qui pourrait expliquer cet Ã©cart de rÃ©sultats. "),
-            p("Pour vÃ©rifier cette hypothÃ¨se nous allons voulu regarder le niveau d'Ã©ducation ( et mÃ©tier ) des parents."),
-            p("La premiÃ¨re chose Ã  faire est de regarder avec qui vivent la majoritÃ© des enfants. Ainsi on peut noter que la plupart des Ã©tudiants vivent avec leurs deux parents,et pour ceux qui vivent avec l'un des deux parents, c'est la mÃ¨re qui est, dans la plupart des cas, le tuteur lÃ©gal. En effet:")
+            p("La première idée qui pourrait nous venir à l'esprit, est probablement l'influence de la famille ie des parents. En outre, il est vrai que si les parents de GP ont plus fait d'étude que MS, alors potentiellement ils pourraient d'avantage les aider ou auraient pu davantager les aider durant leur scolarité, ce qui pourrait expliquer cet écart de résultats. "),
+            p("Pour vérifier cette hypothèse nous allons voulu regarder le niveau d'éducation ( et métier ) des parents."),
+            p("La première chose à faire est de regarder avec qui vivent la majorité des enfants. Ainsi on peut noter que la plupart des étudiants vivent avec leurs deux parents,et pour ceux qui vivent avec l'un des deux parents, c'est la mère qui est, dans la plupart des cas, le tuteur légal. En effet:")
           ),
           column(
             width = 6,
@@ -215,7 +214,7 @@ ui <- dashboardPage(
           column(
             width = 12,
             hr(),
-            p("De ce fait, on va devoir s'intÃ©resser aux deux parents."),
+            p("De ce fait, on va devoir s'intéresser aux deux parents."),
             HTML("<h4><strong><span style='color: #2f4b7c;'> Education des parents </span></strong></h2>"),
             
             selectInput("x_variable", "Choisir la variable x", choices = c("Medu", "Fedu", "Mjob", "Fjob")),
@@ -224,13 +223,13 @@ ui <- dashboardPage(
           hr(),
           column(
             width=12,
-            p("On remarque, Ã©ffectivement, que les parents de GP que se soit le pÃ¨re ou la mÃ¨re, sont plus nombreux Ã  avoir fait des Ã©tudes et notamment des Ã©tudes de longue durÃ©es. Cela est plus percutant pour la mÃ¨re que pour le pÃ¨re."),
+            p("On remarque, éffectivement, que les parents de GP que se soit le père ou la mère, sont plus nombreux à avoir fait des études et notamment des études de longue durées. Cela est plus percutant pour la mère que pour le père."),
             HTML("<div class='justify-text'>
- <p style='text-align: justify;'> On peut conclure, par dire que le niveau d'Ã©ducation semblerait avoir un impact sur la rÃ©ussite d'un Ã©lÃ¨ve ( en mathÃ©matiques). Pour essayer de trouver d'autres facteurs explicatifs, nous poursuiveront notre Ã©tude sur l'ensemble du jeu de donnÃ©es, afin d'avoir une place grande confiance en nos indicateurs ( historique de donnÃ©es trop faible pour MS).Par consÃ©quent,dans la prochaine partie nous comparerons les classes de notes G3 au lieu des lycÃ©es.</p>
+ <p style='text-align: justify;'> On peut conclure, par dire que le niveau d'éducation semblerait avoir un impact sur la réussite d'un élève ( en mathématiques). Pour essayer de trouver d'autres facteurs explicatifs, nous poursuiveront notre étude sur l'ensemble du jeu de données, afin d'avoir une place grande confiance en nos indicateurs ( historique de données trop faible pour MS).Par conséquent,dans la prochaine partie nous comparerons les classes de notes G3 au lieu des lycées.</p>
  </div>"),
             HTML("<h4><strong><span style='color: #2f4b7c;'> Association metier/education? </span></strong></h2>"),
-            HTML("L'association entre le niveau d'Ã©ducation de la mÃ¨re(resp. pÃ¨re) et l'emploi de la mÃ¨re(resp. pÃ¨re) a Ã©tÃ© Ã©tudiÃ©e en premier lieu, car il est raisonnable de penser qu'il existe une association entre ces deux variables.<br>
-  Ce graphique represente la proportion des niveaux d'emploi de la mÃ¨re(resp. pÃ¨re) est reprÃ©sentÃ©e pour chaque niveau d'Ã©ducation de la mÃ¨re(resp. pÃ¨re)."), # Ajouter du texte en utilisant HTML
+            HTML("L'association entre le niveau d'éducation de la mère(resp. père) et l'emploi de la mère(resp. père) a été étudiée en premier lieu, car il est raisonnable de penser qu'il existe une association entre ces deux variables.<br>
+  Ce graphique represente la proportion des niveaux d'emploi de la mère(resp. père) est représentée pour chaque niveau d'éducation de la mère(resp. père)."), # Ajouter du texte en utilisant HTML
             sidebarLayout(
               sidebarPanel(
                 selectInput("var3", "Choisir le couple de variables",
@@ -244,9 +243,9 @@ ui <- dashboardPage(
               mainPanel(
                 plotOutput("VarPlot2")
               )),
-            HTML("AprÃ¨s examination de l'association entre le niveau d'Ã©ducation des parents et leur emploi, on remarque une association significative entre le niveau d'Ã©ducation des parents (Fedu/Medu) et leur emploi (FjobD/MjobD)."),
-            HTML("De plus, une association significative a Ã©tÃ© observÃ©e entre l'emploi de la mÃ¨re et du pÃ¨re. L'Ã©ducation de la mÃ¨re et le soutien familial (famsup) Ã©taient Ã©galement associÃ©s, suggÃ©rant que la mÃ¨re Ã©tait souvent responsable du soutien familial."),
-            HTML("Ces constatations renforcent notre comprÃ©hension des facteurs qui influencent la rÃ©ussite scolaire des Ã©lÃ¨ves, mettant en Ã©vidence le lien entre le mÃ©tier des parents, leur niveau d'Ã©ducation et la rÃ©ussite de l'Ã©lÃ¨ve.") 
+            HTML("Après examination de l'association entre le niveau d'éducation des parents et leur emploi, on remarque une association significative entre le niveau d'éducation des parents (Fedu/Medu) et leur emploi (FjobD/MjobD)."),
+            HTML("De plus, une association significative a été observée entre l'emploi de la mère et du père. L'éducation de la mère et le soutien familial (famsup) étaient également associés, suggérant que la mère était souvent responsable du soutien familial."),
+            HTML("Ces constatations renforcent notre compréhension des facteurs qui influencent la réussite scolaire des élèves, mettant en évidence le lien entre le métier des parents, leur niveau d'éducation et la réussite de l'élève.") 
           )
         )
       ),
@@ -257,33 +256,33 @@ ui <- dashboardPage(
                   HTML("<h1 style='color: #003f5c; text-align: center;'><strong> Un peu de machine learning ... </strong></h1>"),
                   HTML("<h3><strong><span style='color: #a05195;'> Rappel du contexte </span></strong></h3>"),
                   HTML("<div class='justify-text'>
- <p style='text-align: justify;'> Dans la sous-partie prÃ©cÃ©dente, nous avions commencÃ© par Ã©tudier les deux lycÃ©es, mais manque de donnÃ©es nous avons conclus qu'il Ã©tait prÃ©fÃ©rable de faire une Ã©tude sur l'ensemble du jeu de donnÃ©es. Cependant, notre base de donnÃ©es contient 32 potentiels variables explicatives. C'est pour cela que nous avons fait appel au machine learning pour Ã©tudier les 'vraies' variables explicatives de G3. </p>
+ <p style='text-align: justify;'> Dans la sous-partie précédente, nous avions commencé par étudier les deux lycées, mais manque de données nous avons conclus qu'il était préférable de faire une étude sur l'ensemble du jeu de données. Cependant, notre base de données contient 32 potentiels variables explicatives. C'est pour cela que nous avons fait appel au machine learning pour étudier les 'vraies' variables explicatives de G3. </p>
  </div>"),
-                  HTML("<h2><strong><span style='color: #665191;'> Matrice de corrÃ©lation </span></strong></h2>"),
+                  HTML("<h2><strong><span style='color: #665191;'> Matrice de corrélation </span></strong></h2>"),
                   HTML("<div class='justify-text'>
- <p style='text-align: justify;'> Pour commencer, nous avons voulu plot une matrice de corrÃ©lation. Il faut savoir qu'une matrice de corrÃ©lation se fait gÃ©nÃ©ralement avec des donnÃ©es numÃ©rique, ce qui n'est pas le cas de toutes nos variables. Pour faire face Ã  ce problÃ¨me nous avons crÃ©er data2 : </p>
+ <p style='text-align: justify;'> Pour commencer, nous avons voulu plot une matrice de corrélation. Il faut savoir qu'une matrice de corrélation se fait généralement avec des données numérique, ce qui n'est pas le cas de toutes nos variables. Pour faire face à ce problème nous avons créer data2 : </p>
  </div>"),
                   p("data2 <- predict(dummyVars(~ ., data = data), newdata = data)"),
                   HTML("<div class='justify-text'>
- <p style='text-align: justify;'> Les variables factices ont Ã©tÃ© crÃ©Ã©es Ã  partir des donnÃ©es catÃ©gorielles initiales ( grace Ã  la fonction dummyVars) pour permettre l'utilisation de ces informations dans des modÃ¨les d'analyse( et/ ou d'apprentissage automatique). Cette transformation permet de reprÃ©senter les catÃ©gories sous forme de variables binaires, facilitant ainsi l'intÃ©gration des caractÃ©ristiques catÃ©gorielles dans des analyses statistiques et des prÃ©visions tout en prÃ©servant la structure d'origine des donnÃ©es. </p>
+ <p style='text-align: justify;'> Les variables factices ont été créées à partir des données catégorielles initiales ( grace à la fonction dummyVars) pour permettre l'utilisation de ces informations dans des modèles d'analyse( et/ ou d'apprentissage automatique). Cette transformation permet de représenter les catégories sous forme de variables binaires, facilitant ainsi l'intégration des caractéristiques catégorielles dans des analyses statistiques et des prévisions tout en préservant la structure d'origine des données. </p>
  </div>"),
                   
                   mainPanel(
                     plotlyOutput("heatmap")
                   ),
                   HTML("<div class='justify-text'>
- <p style='text-align: justify;'> Aussi jolie soit-elle, le grand nombres de variables rend trÃ¨s difficile l'analyse de cette derniÃ¨re. Pour cela passons Ã  de l'apprentissage automatique </p>
+ <p style='text-align: justify;'> Aussi jolie soit-elle, le grand nombres de variables rend très difficile l'analyse de cette dernière. Pour cela passons à de l'apprentissage automatique </p>
  </div>")),
                 
                 column(
                   width = 12,
                   HTML("<h2><strong><span style='color: #665191;'> Random Forest </span></strong></h2>"),
                   HTML("<div class='justify-text'>
- <p style='text-align: justify;'> Nous avions donc testÃ© diffÃ©rents modÃ¨le d'apprentissages tels que la regression multiple, SVM etc, mais le random etait celui qui nous donnait les meilleurs rÃ©sultats. </p>
+ <p style='text-align: justify;'> Nous avions donc testé différents modèle d'apprentissages tels que la regression multiple, SVM etc, mais le random etait celui qui nous donnait les meilleurs résultats. </p>
  </div>"),
                   HTML("<div class='justify-text'>
  <p style='text-align: justify;'>  
- &bull; <strong>PremiÃ¨re Ã©tape :</strong> on a sÃ©parÃ© notre jeu de donnÃ©es en un jeu d'apprentissage avec lequel nous entraÃ®nerons notre modÃ¨le et un jeu test pour tester notre modÃ¨le par la suite en le comparant aux donnÃ©es de prÃ©dictions.
+ &bull; <strong>Première étape :</strong> on a séparé notre jeu de données en un jeu d'apprentissage avec lequel nous entraînerons notre modèle et un jeu test pour tester notre modèle par la suite en le comparant aux données de prédictions.
  <br>
  &minus; <code>train_percentage <- 0.8</code>
  <br>
@@ -300,7 +299,7 @@ ui <- dashboardPage(
 </div>"),
                   HTML("<div class='justify-text'>
  <p style='text-align: justify;'>  
- &bull; <strong> DeuxiÃ¨me Ã©tape : </strong> <code>model_rf <- randomForest(G3 ~ ., data = train_data)</code>, qui nous donne les variables importantes que vous pouvez retrouver dans l'item importance des variables. 
+ &bull; <strong> Deuxième étape : </strong> <code>model_rf <- randomForest(G3 ~ ., data = train_data)</code>, qui nous donne les variables importantes que vous pouvez retrouver dans l'item importance des variables. 
  Ainsi, les variables qui semblent expliquer le plus G3 sont :
  <br>
  &minus; G1
@@ -324,24 +323,24 @@ ui <- dashboardPage(
 </div>"),
                   HTML("<div class='justify-text'>
  <p style='text-align: justify;'>  
- &bull; <strong> TroisiÃ¨me Ã©tape :</strong> ajustement du modÃ¨le
+ &bull; <strong> Troisième étape :</strong> ajustement du modèle
  <code>model_rf2 <- randomForest(G3 ~ G1+G2+failures+absences+age+goout+Fjob+Mjob+Medu, data = train_data)</code>
  </p>
 </div>"),
                   HTML("<div class='justify-text'>
  <p style='text-align: justify;'>  
- <strong> QuatriÃ¨me Ã©tape : </strong> comparaison des model_rf & model_rf2.
+ <strong> Quatrième étape : </strong> comparaison des model_rf & model_rf2.
  <br>
- D'abord, dans l'item 'importance des variables', on a la sortie du modÃ¨le 2, et on peut comparer ces deux modÃ¨les dans les items MÃ©triques et PrÃ©dictions.
+ D'abord, dans l'item 'importance des variables', on a la sortie du modèle 2, et on peut comparer ces deux modèles dans les items Métriques et Prédictions.
  </p>
  <ul>
-  <li>Les mÃ©triques comparatives pour les modÃ¨les 'RF' et 'RF2' sont les suivantes :</li>
+  <li>Les métriques comparatives pour les modèles 'RF' et 'RF2' sont les suivantes :</li>
   <ul>
-  <li>RÂ² (Coefficient de dÃ©termination) : RF (0.84) explique 84 % de la variance des donnÃ©es, tandis que RF2 (0.85) est lÃ©gÃ¨rement meilleur.</li>
-  <li>RMSE (Erreur quadratique moyenne) : RF (1.97) a une erreur moyenne de 1.97 unitÃ©s par rapport aux valeurs rÃ©elles, tandis que RF2 (1.91) est lÃ©gÃ¨rement plus prÃ©cis.</li>
-  <li>MAE (Erreur moyenne absolue) : RF (1.42) a une erreur moyenne de 1.42 unitÃ©s par rapport aux valeurs rÃ©elles, tandis que RF2 (1.37) est lÃ©gÃ¨rement plus prÃ©cis.</li>
+  <li>R² (Coefficient de détermination) : RF (0.84) explique 84 % de la variance des données, tandis que RF2 (0.85) est légèrement meilleur.</li>
+  <li>RMSE (Erreur quadratique moyenne) : RF (1.97) a une erreur moyenne de 1.97 unités par rapport aux valeurs réelles, tandis que RF2 (1.91) est légèrement plus précis.</li>
+  <li>MAE (Erreur moyenne absolue) : RF (1.42) a une erreur moyenne de 1.42 unités par rapport aux valeurs réelles, tandis que RF2 (1.37) est légèrement plus précis.</li>
   </ul>
-  <li>Concernant les prÃ©dictions, on observe graphiquement que model_rf2 prÃ©dit mieux.</li>
+  <li>Concernant les prédictions, on observe graphiquement que model_rf2 prédit mieux.</li>
  </ul>
 </div>"),
                   
@@ -349,11 +348,11 @@ ui <- dashboardPage(
                   
                   tabsetPanel(
                     tabPanel("Importance des variables", tableOutput("varImportance")),
-                    tabPanel("MÃ©trique", tableOutput("resultsTable")),
-                    tabPanel("PrÃ©dictions", 
+                    tabPanel("Métrique", tableOutput("resultsTable")),
+                    tabPanel("Prédictions", 
                              fluidRow(
-                               column(6, plotlyOutput("plot1")), # Divise l'Ã©cran en deux colonnes
-                               column(6, plotlyOutput("p2")) # Divise l'Ã©cran en deux colonnes
+                               column(6, plotlyOutput("plot1")), # Divise l'écran en deux colonnes
+                               column(6, plotlyOutput("p2")) # Divise l'écran en deux colonnes
                              )
                     )
                     
@@ -366,9 +365,9 @@ ui <- dashboardPage(
         tabName = "comparaison_ensemble",
         HTML("<h1 style='color: #003f5c; text-align: center;'><strong> Visualisation de l'association des variables importantes </strong></h1>"),
         
-        HTML("<p>L'analyse des performances scolaires est une tÃ¢che complexe qui dÃ©pend de divers facteurs. Dans le cadre de notre Ã©tude, nous avons choisi de nous concentrer sur plusieurs variables clÃ©s afin de mieux comprendre les associations qui pourraient influencer les rÃ©sultats du troisiÃ¨me trimestre (T3). Ces variables ont Ã©tÃ© sÃ©lectionnÃ©es en se basant sur les rÃ©sultats d'un modÃ¨le de forÃªt alÃ©atoire (random forest), qui a identifiÃ© celles-ci comme les plus significatives pour prÃ©dire les performances acadÃ©miques.</p>"),
+        HTML("<p>L'analyse des performances scolaires est une tâche complexe qui dépend de divers facteurs. Dans le cadre de notre étude, nous avons choisi de nous concentrer sur plusieurs variables clés afin de mieux comprendre les associations qui pourraient influencer les résultats du troisième trimestre (T3). Ces variables ont été sélectionnées en se basant sur les résultats d'un modèle de forêt aléatoire (random forest), qui a identifié celles-ci comme les plus significatives pour prédire les performances académiques.</p>"),
         
-        HTML("<p>Les variables examinÃ©es comprennent la relation entre les notes du premier trimestre (T1) et des facteurs tels que le temps consacrÃ© Ã  sortir avec des amis, les absences en classe, les Ã©checs acadÃ©miques, l'Ã¢ge des Ã©tudiants, le mÃ©tier de la mÃ¨re, et le niveau d'Ã©ducation de la mÃ¨re. Ces choix ont Ã©tÃ© guidÃ©s par le dÃ©sir de comprendre comment des Ã©lÃ©ments de la vie sociale, des aspects familiaux et d'autres facteurs peuvent impacter les performances acadÃ©miques des Ã©tudiants.</p>"),
+        HTML("<p>Les variables examinées comprennent la relation entre les notes du premier trimestre (T1) et des facteurs tels que le temps consacré à sortir avec des amis, les absences en classe, les échecs académiques, l'âge des étudiants, le métier de la mère, et le niveau d'éducation de la mère. Ces choix ont été guidés par le désir de comprendre comment des éléments de la vie sociale, des aspects familiaux et d'autres facteurs peuvent impacter les performances académiques des étudiants.</p>"),
         
         
         sidebarLayout(
@@ -385,22 +384,22 @@ ui <- dashboardPage(
           )
         ),
         HTML("<h3><strong><span style='color: #a05195;'>Notes T1 vs Sortir avec ses amis ?</span></strong></h2>
- <p>Le premier graphique examine la corrÃ©lation entre les notes du premier trimestre (T1) et le temps consacrÃ© Ã  sortir avec des amis. On observe une tendance intÃ©ressante qui suggÃ¨re que les Ã©tudiants passant plus de temps Ã  socialiser ont tendance Ã  obtenir des notes lÃ©gÃ¨rement infÃ©rieures. Cette association peut s'expliquer par le fait que le temps consacrÃ© aux activitÃ©s sociales pourrait Ãªtre du temps perdu pour les Ã©tudes, ce qui pourrait affecter les performances acadÃ©miques.</p>"),
+ <p>Le premier graphique examine la corrélation entre les notes du premier trimestre (T1) et le temps consacré à sortir avec des amis. On observe une tendance intéressante qui suggère que les étudiants passant plus de temps à socialiser ont tendance à obtenir des notes légèrement inférieures. Cette association peut s'expliquer par le fait que le temps consacré aux activités sociales pourrait être du temps perdu pour les études, ce qui pourrait affecter les performances académiques.</p>"),
         
         HTML("<h3><strong><span style='color: #a05195;'>Absences vs Sortir avec ses amis ?</span></strong></h2>
- <p>Le deuxiÃ¨me graphique explore le lien entre les absences en classe et le temps passÃ© Ã  sortir avec des amis. Il rÃ©vÃ¨le une corrÃ©lation nÃ©gative, indiquant que les Ã©tudiants qui sortent frÃ©quemment ont tendance Ã  avoir un nombre plus Ã©levÃ© d'absences. Cela pourrait Ãªtre dÃ» Ã  une Ã©ventuelle nÃ©gligence des responsabilitÃ©s acadÃ©miques au profit d'activitÃ©s sociales.</p>"),
+ <p>Le deuxième graphique explore le lien entre les absences en classe et le temps passé à sortir avec des amis. Il révèle une corrélation négative, indiquant que les étudiants qui sortent fréquemment ont tendance à avoir un nombre plus élevé d'absences. Cela pourrait être dû à une éventuelle négligence des responsabilités académiques au profit d'activités sociales.</p>"),
         
         HTML("<h3><strong><span style='color: #a05195;'>Echecs vs Sortir avec ses amis ?</span></strong></h2>
- <p>En ce qui concerne les Ã©checs acadÃ©miques, le troisiÃ¨me graphique met en lumiÃ¨re une association significative entre le fait de sortir avec des amis et le nombre d'Ã©checs. Les Ã©lÃ¨ves passant beaucoup de temps en activitÃ©s sociales semblent avoir un risque accru d'Ã©checs. Cette corrÃ©lation pourrait Ãªtre attribuÃ©e au manque de concentration et de prÃ©paration rÃ©sultant des sorties frÃ©quentes.</p>"),
+ <p>En ce qui concerne les échecs académiques, le troisième graphique met en lumière une association significative entre le fait de sortir avec des amis et le nombre d'échecs. Les élèves passant beaucoup de temps en activités sociales semblent avoir un risque accru d'échecs. Cette corrélation pourrait être attribuée au manque de concentration et de préparation résultant des sorties fréquentes.</p>"),
         
         HTML("<h3><strong><span style='color: #a05195;'>Age vs Echecs ?</span></strong></h2>
- <p>Le quatriÃ¨me graphique examine la relation entre l'Ã¢ge des Ã©tudiants et leur nombre d'Ã©checs. Ã‰tonnamment, il suggÃ¨re qu'un Ã¢ge plus avancÃ© est associÃ© Ã  un risque accru d'Ã©checs. Cela pourrait Ãªtre expliquÃ© par des dÃ©fis personnels ou des responsabilitÃ©s accrues liÃ©s Ã  l'Ã¢ge.</p>"),
+ <p>Le quatrième graphique examine la relation entre l'âge des étudiants et leur nombre d'échecs. Étonnamment, il suggère qu'un âge plus avancé est associé à un risque accru d'échecs. Cela pourrait être expliqué par des défis personnels ou des responsabilités accrues liés à l'âge.</p>"),
         
-        HTML("<h3><strong><span style='color: #a05195;'>Metier mÃ¨re vs Notes T2 ?</span></strong></h2>
- <p>Le cinquiÃ¨me graphique met en Ã©vidence une corrÃ©lation entre le mÃ©tier de la mÃ¨re et les notes du deuxiÃ¨me trimestre (T2). On observe que certaines professions maternelles sont associÃ©es Ã  des performances acadÃ©miques plus Ã©levÃ©es. Cette relation peut Ãªtre influencÃ©e par divers facteurs tels que le soutien parental, les ressources Ã©ducatives disponibles, etc.</p>"),
+        HTML("<h3><strong><span style='color: #a05195;'>Metier mère vs Notes T2 ?</span></strong></h2>
+ <p>Le cinquième graphique met en évidence une corrélation entre le métier de la mère et les notes du deuxième trimestre (T2). On observe que certaines professions maternelles sont associées à des performances académiques plus élevées. Cette relation peut être influencée par divers facteurs tels que le soutien parental, les ressources éducatives disponibles, etc.</p>"),
         
-        HTML("<h3><strong><span style='color: #a05195;'>Niveau education vs mÃ¨re Notes T1 ?</span></strong></h2>
- <p>Enfin, le dernier graphique explore la relation entre les notes du premier trimestre (T1) et le niveau d'Ã©ducation de la mÃ¨re. On constate une corrÃ©lation positive, suggÃ©rant que les Ã©tudiants dont les mÃ¨res ont un niveau d'Ã©ducation plus Ã©levÃ© ont tendance Ã  obtenir de meilleures notes. Cette association pourrait Ãªtre attribuÃ©e Ã  un environnement familial favorisant l'Ã©ducation et l'apprentissage.</p>")
+        HTML("<h3><strong><span style='color: #a05195;'>Niveau education vs mère Notes T1 ?</span></strong></h2>
+ <p>Enfin, le dernier graphique explore la relation entre les notes du premier trimestre (T1) et le niveau d'éducation de la mère. On constate une corrélation positive, suggérant que les étudiants dont les mères ont un niveau d'éducation plus élevé ont tendance à obtenir de meilleures notes. Cette association pourrait être attribuée à un environnement familial favorisant l'éducation et l'apprentissage.</p>")
         
         
       ),
@@ -409,9 +408,9 @@ ui <- dashboardPage(
         fluidRow(
           column(
             width = 12,
-            HTML("<h1 style='color: #003f5c; text-align: center;'><strong> PrÃ©diction </strong></h1>"),
-            HTML("<h2><span style='color:#665191;'> Enfin arrivÃ© Ã  la partie prÃ©diction ! </span><h2>"),
-            p("Merci de spÃ©cifier les valeurs correspondantes pour chacune des variables ci-dessous."),
+            HTML("<h1 style='color: #003f5c; text-align: center;'><strong> Prédiction </strong></h1>"),
+            HTML("<h2><span style='color:#665191;'> Enfin arrivé à la partie prédiction ! </span><h2>"),
+            p("Merci de spécifier les valeurs correspondantes pour chacune des variables ci-dessous."),
             sidebarLayout(
               sidebarPanel(
                 sliderInput("g1", "G1 (0-20):", min = 0, max = 20, value = 10),
@@ -440,7 +439,7 @@ ui <- dashboardPage(
             width = 12,
             HTML("<h1 style='color: #003f5c; text-align: center;'><strong> Conclusion </strong></h1>"),
             HTML("<div class='justify-text'>
- <p style='text-align: justify;'> En conclusion, l'idÃ©e 'qui veut peut' a Ã©tÃ© nuancÃ©e par notre analyse. Bien que la volontÃ© et l'effort personnel soient importants, notre examen graphique et le modÃ¨le de machine learning rÃ©vÃ¨lent l'influence significative de facteurs socio-dÃ©mographiques sur la performance acadÃ©mique. La rÃ©ussite ne dÃ©pend pas uniquement de l'effort individuel, mais aussi de variables telles que les Ã©checs antÃ©rieurs, l'absentÃ©isme, l'Ã¢ge, les activitÃ©s extra-scolaires, le mÃ©tier des parents et le niveau d'Ã©ducation de la mÃ¨re. Ainsi, qui ne veut pas ne peut pas toujours ! Des facteurs indÃ©pendants de notre volontÃ©, tels que le mÃ©tier des parents, influent directement sur notre parcours. Il est essentiel d'adapter les systÃ¨mes Ã©ducatifs pour attÃ©nuer ces inÃ©galitÃ©s et Ã©viter leur perpÃ©tuation de gÃ©nÃ©ration en gÃ©nÃ©ration.</p>
+ <p style='text-align: justify;'> En conclusion, l'idée 'qui veut peut' a été nuancée par notre analyse. Bien que la volonté et l'effort personnel soient importants, notre examen graphique et le modèle de machine learning révèlent l'influence significative de facteurs socio-démographiques sur la performance académique. La réussite ne dépend pas uniquement de l'effort individuel, mais aussi de variables telles que les échecs antérieurs, l'absentéisme, l'âge, les activités extra-scolaires, le métier des parents et le niveau d'éducation de la mère. Ainsi, qui ne veut pas ne peut pas toujours ! Des facteurs indépendants de notre volonté, tels que le métier des parents, influent directement sur notre parcours. Il est essentiel d'adapter les systèmes éducatifs pour atténuer ces inégalités et éviter leur perpétuation de génération en génération.</p>
  </div>")
           )
         )
@@ -469,7 +468,7 @@ server <- function(input, output, session) {
   
   explanations_output <- renderText({
     if (length(selected_vars()) == 0) {
-      return("SÃ©lectionnez au moins une variable.")
+      return("Sélectionnez au moins une variable.")
     }
     explanation_text <- lapply(selected_vars(), function(var) {
       return(paste("Explication de", var, ":", explanations[[var]]))
@@ -500,7 +499,7 @@ server <- function(input, output, session) {
         
         geom_bar(fill = "#a05195") +
         
-        labs(x = variable, y = "FrÃ©quence") +
+        labs(x = variable, y = "Fréquence") +
         
         ggtitle(variable) +
         
@@ -623,25 +622,25 @@ server <- function(input, output, session) {
   output$barplot <- renderPlotly({
     y_variable1 <- input$y_variable1
     
-    # CrÃ©ez une nouvelle colonne catÃ©gorielle basÃ©e sur les notes
+    # Créez une nouvelle colonne catégorielle basée sur les notes
     data_MS$Category <- cut(data_MS[[y_variable1]], breaks = c(0, 5, 10, 15, 20), labels = c("1", "2", "3", "4"),include.lowest = TRUE)
     data_GP$Category <- cut(data_GP[[y_variable1]], breaks = c(0, 5, 10, 15, 20), labels = c("1", "2", "3", "4"),include.lowest = TRUE)
     
     
-    # Calculez les proportions pour chaque catÃ©gorie
+    # Calculez les proportions pour chaque catégorie
     proportion_classes_MS <- table(data_MS$Category) / nrow(data_MS)
     proportion_classes_GP <- table(data_GP$Category) / nrow(data_GP)
     
     
     
-    # DÃ©finissez une palette de couleurs pour chaque catÃ©gorie
+    # Définissez une palette de couleurs pour chaque catégorie
     colors <- c("#003f5c", "#2f4b7c", "#665191", "#a05195")
     
     barplot_MS <- plot_ly(
       x = levels(data_MS$Category),
       y = proportion_classes_MS,
       type = 'bar',
-      name = '(Ã‰cole MS)',
+      name = '(École MS)',
       marker = list(color = colors),
       showlegend = FALSE
     ) %>%
@@ -664,7 +663,7 @@ server <- function(input, output, session) {
       x = levels(data_GP$Category),
       y = proportion_classes_GP,
       type = 'bar',
-      name = '(Ã‰cole GP)',
+      name = '(École GP)',
       marker = list(color = colors),
       showlegend = FALSE
     ) %>%
@@ -716,7 +715,7 @@ server <- function(input, output, session) {
       
       geom_bar(stat = "identity", position = "dodge", width = 0.7) +
       
-      labs(title = paste("Proportion de", var, "par Ã©cole"),
+      labs(title = paste("Proportion de", var, "par école"),
            
            x = var, y = "Proportion") +
       
@@ -724,7 +723,7 @@ server <- function(input, output, session) {
       
       scale_fill_manual(values = c("GP" = "#003f5c", "MS" = "#a05195"),
                         
-                        name = "Ã‰cole",
+                        name = "École",
                         
                         labels = c("GP", "MS")) +
       
@@ -782,7 +781,7 @@ server <- function(input, output, session) {
   library(plotly)
   output$distribution_plotss <- renderPlotly({
     combined_plot <- subplot(
-      # Cela crÃ©e une cellule vide pour le graphique GP
+      # Cela crée une cellule vide pour le graphique GP
       {
         filtered_data_GP <- data %>%
           filter(school == "GP")
@@ -832,11 +831,11 @@ server <- function(input, output, session) {
     )
     combined_plot <- layout(
       combined_plot,
-      title = "Distribution des donnÃ©es pour l'Ã©cole GP et MS par variable",
-      margin = list(t = 100) # Ajustez la marge supÃ©rieure pour faire de la place au titre gÃ©nÃ©ral
+      title = "Distribution des données pour l'école GP et MS par variable",
+      margin = list(t = 100) # Ajustez la marge supérieure pour faire de la place au titre général
     )
     
-    # Ajoutez une lÃ©gende
+    # Ajoutez une légende
     combined_plot <- layout(combined_plot, showlegend = TRUE)
     
     combined_plot
@@ -872,13 +871,13 @@ server <- function(input, output, session) {
     var_importance <- importance(model_rf)
     var_names <- rownames(var_importance)
     
-    # CrÃ©ez un vecteur avec les valeurs d'importance triÃ©es
+    # Créez un vecteur avec les valeurs d'importance triées
     sorted_importance <- var_importance[order(-var_importance)]
     
-    # CrÃ©ez un vecteur de noms triÃ©s correspondant aux valeurs d'importance
+    # Créez un vecteur de noms triés correspondant aux valeurs d'importance
     sorted_names <- var_names[order(-var_importance)]
     
-    # CrÃ©ez un dataframe Ã  partir des vecteurs triÃ©s
+    # Créez un dataframe à partir des vecteurs triés
     var_importance_df <- data.frame(Variable = sorted_names, Importance = sorted_importance)
     print(var_importance_df)
   })
@@ -888,7 +887,7 @@ server <- function(input, output, session) {
   output$plot1 <- renderPlotly({
     predictions_rf <- predict(model_rf, newdata = test_data)
     p1 <- plot_ly(x = test_data$G3, y = predictions_rf, type = 'scatter', mode = 'markers', marker = list(color = "#a05195"))
-    p1 <- p1 %>% layout(xaxis = list(title = "Valeurs RÃ©elles (G3)"), yaxis = list(title = "PrÃ©dictions (G3)"))
+    p1 <- p1 %>% layout(xaxis = list(title = "Valeurs Réelles (G3)"), yaxis = list(title = "Prédictions (G3)"))
     return(p1)
   })
   
@@ -896,7 +895,7 @@ server <- function(input, output, session) {
   output$p2 <- renderPlotly({
     predictions_rf2 <- predict(model_rf2, newdata = test_data)
     p2 <- plot_ly(x = test_data$G3, y = predictions_rf2, type = 'scatter', mode = 'markers', marker = list(color = "#a05195"))
-    p2 <- p2 %>% layout(xaxis = list(title = "Valeurs RÃ©elles (G3)"), yaxis = list(title = "PrÃ©dictions (G3)"))
+    p2 <- p2 %>% layout(xaxis = list(title = "Valeurs Réelles (G3)"), yaxis = list(title = "Prédictions (G3)"))
     return(p2)
   })
   
@@ -915,7 +914,7 @@ server <- function(input, output, session) {
     mae_rf2 <- mean(abs(predictions_rf2 - test_data$G3))
     
     results <- data.frame(
-      Metric = c("RÂ²", "RMSE", "MAE"),
+      Metric = c("R²", "RMSE", "MAE"),
       RF = c(r_squared_rf, rmse_rf, mae_rf),
       RF2 = c(r_squared_rf2, rmse_rf2, mae_rf2)
     )
@@ -953,7 +952,7 @@ server <- function(input, output, session) {
         
         scale_fill_manual(values = c("1" = "#003f5c", "2" = "#2f4b7c", "3" = "#665191", "4" = "#a05195", "5" = "#d45087"), 
                           
-                          labels = c("TrÃ¨s peu", "Peu", "Moyen", "Haut", "TrÃ¨s haut")) +
+                          labels = c("Très peu", "Peu", "Moyen", "Haut", "Très haut")) +
         
         theme_minimal() +
         
@@ -978,7 +977,7 @@ server <- function(input, output, session) {
         arrange(goout)
       
       
-      # CrÃ©er un barplot avec les proportions
+      # Créer un barplot avec les proportions
       
       ggplot(prop_da, aes(x = as.factor(absences), y = prop, fill = as.factor(goout))) +
         
@@ -993,7 +992,7 @@ server <- function(input, output, session) {
         
         scale_fill_manual(values = c("1" = "#003f5c", "2" = "#2f4b7c", "3" = "#665191", "4" = "#a05195", "5" = "#d45087"), 
                           
-                          labels = c("TrÃ¨s peu", "Peu", "Moyen", "Haut", "TrÃ¨s haut")) +
+                          labels = c("Très peu", "Peu", "Moyen", "Haut", "Très haut")) +
         
         theme_minimal() +
         
@@ -1016,7 +1015,7 @@ server <- function(input, output, session) {
         arrange(goout)
       
       
-      # CrÃ©er un barplot avec les proportions
+      # Créer un barplot avec les proportions
       
       ggplot(prop_d, aes(x = as.factor(failures), y = prop, fill = as.factor(goout))) +
         
@@ -1028,7 +1027,7 @@ server <- function(input, output, session) {
         
         scale_fill_manual(values = c("1" = "#003f5c", "2" = "#2f4b7c", "3" = "#665191", "4" = "#a05195", "5" = "#d45087"), 
                           
-                          labels = c("TrÃ¨s peu", "Peu", "Moyen", "Haut", "TrÃ¨s haut")) +
+                          labels = c("Très peu", "Peu", "Moyen", "Haut", "Très haut")) +
         
         theme_minimal() +
         
@@ -1052,7 +1051,7 @@ server <- function(input, output, session) {
         arrange(Mjob)
       
       
-      # CrÃ©er un barplot avec les proportions
+      # Créer un barplot avec les proportions
       
       ggplot(prop_d2, aes(x = as.factor(G2), y = prop, fill = as.factor(Mjob))) +
         
@@ -1082,7 +1081,7 @@ server <- function(input, output, session) {
         arrange(Medu)
       
       
-      # CrÃ©er un barplot avec les proportions
+      # Créer un barplot avec les proportions
       
       ggplot(prop_d2, aes(x = as.factor(G1), y = prop, fill = as.factor(Medu))) +
         
@@ -1113,7 +1112,7 @@ server <- function(input, output, session) {
         arrange(failures)
       
       
-      # CrÃ©er un barplot avec les proportions
+      # Créer un barplot avec les proportions
       
       ggplot(prop_d2, aes(x = as.factor(age), y = prop, fill = as.factor(failures))) +
         
@@ -1192,7 +1191,7 @@ server <- function(input, output, session) {
   
   
   observe({
-    # CrÃ©er un dataframe Ã  partir des valeurs saisies par l'utilisateur
+    # Créer un dataframe à partir des valeurs saisies par l'utilisateur
     new_data_utilisateur <- data.frame(
       G1 = input$g1,
       G2 = input$g2,
