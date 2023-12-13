@@ -1,4 +1,4 @@
-* Bienvenue dans notre projet de data visualisation ! *
+Bienvenue dans notre projet de data visualisation !
 
 Dans ce fichier ( dataviz), vous trouverez : 
 
