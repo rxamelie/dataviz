@@ -7,8 +7,8 @@ Dans ce fichier ( dataviz), vous trouverez :
 - le code R shiny qui vous permettra d'ouvrir notre Dashboard (*app.R*).
 
 Pour ouvrir le Dashboard, deux possibilités:
-  * télécharger le fichier
-  * copier le code de l'app.R sur Github et coller sur un autre fichier R
+ 1. télécharger le fichier
+ 2. copier le code de l'app.R sur Github et coller sur un autre fichier R
 Dans les deux cas : ATTENTION à changer "le chemin" ( ~setwd). Mettez la direction de l'endroit où vous avez déposé la base de données et le fichier R.
 
 NB: si les accents n'apparaissent pas ou apparaissent mal sur le code, une fois l'application téléchargée, vous pouvez directement prendre le code de l'application sur github et le coller dans un fichier R. Cela résoudra le problème.
