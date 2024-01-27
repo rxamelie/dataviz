@@ -1,6 +1,6 @@
 Bienvenue dans notre projet de data visualisation !
 
-Dans ce fichier ( dataviz), vous trouverez : 
+Dans ce répertoire ( dataviz), vous trouverez : 
 
 - la base de données ( *student_mat.xslx* )
 
